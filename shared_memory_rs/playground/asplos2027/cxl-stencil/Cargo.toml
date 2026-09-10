@@ -1,0 +1,8 @@
+[package]
+name = "cxl-stencil"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shm_cxl = { path = "../../../shm-cxl" }
+mpi = "0.8.2"

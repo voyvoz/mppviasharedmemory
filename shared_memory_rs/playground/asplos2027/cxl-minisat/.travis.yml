@@ -1,0 +1,23 @@
+sudo: false
+language: rust
+
+cache: cargo
+
+install:
+  - git clone https://github.com/niklasso/minisat.git $HOME/minisat
+  - make -C $HOME/minisat
+  - export PATH=$HOME/minisat/build/release/bin:$PATH
+
+matrix:
+  include:
+    - rust: stable
+    - rust: beta
+    - rust: nightly
+
+  allow_failures:
+    - rust: nightly
+
+script:
+  - cargo build --verbose
+  - cargo test --verbose
+  - cargo test --release --verbose -- --ignored --nocapture

@@ -1,0 +1,22 @@
+[package]
+authors = [
+    "Alexander Mishunin <alexander.mishunin@gmail.com>",
+    "Laurin Martins <laurin.martins@tu-ilmenau.de>",
+]
+keywords = [
+    "sat",
+    "minisat",
+]
+name = "cxl-minisat"
+version = "0.0.1"
+edition = "2018"
+
+[dependencies]
+shm_cxl = { path = "../../../shm-cxl" }
+clap = "2"
+env_logger = "0.6.2"
+flate2 = "1"
+log = "0.4.8"
+mpi = {version = "0.8.2", features = ["derive"]}
+time = "0.1"
+vec_map = "0.8"

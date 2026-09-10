@@ -1,0 +1,16 @@
+[package]
+name = "shm_cxl"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.95.0"
+
+[dependencies]
+log = { version = "0.4", default-features = false }
+env_logger = { version = "0.11" }
+libc = "0.2.182"
+llfree = { git = "https://codeberg.org/Laur1n/cxl-llfree-rs.git" }
+allocator-api2 = {version = "0.2.21"}
+bitflags = "2.11.0"
+anyhow = "1.0.102"
+mid = "5.0.1"
+gethostname = "1.1.0"

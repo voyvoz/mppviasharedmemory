@@ -1,0 +1,5 @@
+# Pisinger knapsack instances (~1.2 GB) are not tracked; fetch them from
+# https://hjemmesider.diku.dk/~pisinger/codes.html -- see test_data/README.md.
+# knapPI_1_50_1000.csv is the exception: parser.rs pulls it in via include_str!.
+test_data/**/*.csv
+!test_data/smallcoeff_pisinger/knapPI_1_50_1000.csv

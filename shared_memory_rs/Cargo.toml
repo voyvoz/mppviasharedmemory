@@ -1,0 +1,27 @@
+[workspace]
+members = [
+    #"bench",
+    "shm-cxl",
+    "playground/test/lock",
+    "playground/test/pipe",
+    "playground/test/barrier",
+    "playground/dimes2026",
+    "playground/cidr2027",
+    "playground/asplos2027/cxl-tun",
+    "playground/asplos2027/cxl-minisat",
+    "playground/asplos2027/cxl-bfs",
+    "playground/asplos2027/cxl-pagerank",
+    "playground/asplos2027/cxl-sssp",
+    "playground/asplos2027/cxl-triangle",
+    "playground/asplos2027/cxl-kmeans",
+    "playground/asplos2027/cxl-matmul",
+    "playground/asplos2027/cxl-stencil",
+    "playground/asplos2027/cxl-sort",
+    "playground/asplos2027/cxl-bnb",
+    "playground/test/latency_hiding",
+    #"playground/datafusion/query-driven-index",
+    #"playground/datafusion/distributed_hash_join",
+]
+resolver = "2"
+
+[patch."https://codeberg.org/Laur1n/cxl-llfree-rs.git"]

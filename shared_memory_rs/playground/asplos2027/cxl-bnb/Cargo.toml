@@ -1,0 +1,11 @@
+[package]
+name = "cxl-bnb"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shm_cxl = { path = "../../../shm-cxl" }
+mpi = "0.8.2"
+clap = {version="4.6.6", features=["derive"]}
+log = "0.4.34"
+env_logger = "0.11.11"

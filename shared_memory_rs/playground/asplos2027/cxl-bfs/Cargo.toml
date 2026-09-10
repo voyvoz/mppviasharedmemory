@@ -1,0 +1,22 @@
+[package]
+name = "cxl-bfs"
+version = "0.1.0"
+edition = "2024"
+default-run = "cxl-bfs"
+
+[dependencies]
+shm_cxl = { path = "../../../shm-cxl" }
+clap = { version = "4.6.1", features = ["derive"] }
+# rsmpi — only pulled in (and only requires an MPI toolchain) when the `mpi`
+# feature is enabled. Matches the version used by cxl-minisat.
+mpi = { version = "0.8.2", features = ["derive"], optional = true }
+
+[features]
+# Enables the rsmpi (MPI) network BFS engine (`--mpi`). Build with
+# `cargo build -p cxl-bfs --features mpi` and launch via `mpirun -n <P> ...`.
+mpi = ["dep:mpi"]
+
+[[bin]]
+name = "cxl-bfs-mpi"
+path = "src/mpi_main.rs"
+required-features = ["mpi"]

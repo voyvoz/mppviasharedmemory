@@ -1,0 +1,7 @@
+[package]
+name = "latency_hiding"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+shm_cxl = { path = "../../../shm-cxl" }

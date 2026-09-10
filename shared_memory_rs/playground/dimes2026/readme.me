@@ -1,0 +1,15 @@
+## Idea
+
+Distributed Hash Join
+
+1. New very Simple allocator
+     BitMap für alloced/free list
+
+2. CXL HashMap
+- Custom -> Struct mit Offsets zu Buckets die hinter nem lock sind
+- Benches: Bucket count / lock granularity
+
+3. Create sample workload
+-
+
+4. Run on 3 Hosts
